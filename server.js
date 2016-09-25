@@ -84,7 +84,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName', function (req, res) {
-    var articleName = req.param.articleName; // functionality provided by the Express Framework
+    var articleName = req.params.articleName; // functionality provided by the Express Framework
   res.send(createTemplate(articles[articleName]));
 });
 
