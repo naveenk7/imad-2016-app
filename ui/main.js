@@ -13,7 +13,7 @@ function moveRight(){
     
 }
 img.onlcick= function(){
-    var interval = setinterval(moveRight,100); // moveRight every 100ms
+    var interval = setInterval(moveRight,100); // moveRight every 100ms
 }
 
 //img.onclick = function() {
