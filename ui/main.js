@@ -8,12 +8,12 @@ element.innerHTML = "New Value";
 var img = document.getElementById('madi');
 var marginLeft =0;
 function moveRight(){
-    marginLeft = marginLeft+10;
+    marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
     
 }
 img.onlcick= function(){
-    var interval = setInterval(moveRight,100); // moveRight every 100ms
+    var interval = setInterval(moveRight, 100); // moveRight every 100ms
 }
 
 //img.onclick = function() {
