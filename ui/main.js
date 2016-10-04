@@ -11,11 +11,7 @@ function moveRight () {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = marginLeft + 'px';
  }
-//img.onlcick = function () {
-//    var interval = setInterval(moveRight, 50); // moveRight every 100ms
-//};
-
-img.onclick = function() {
-    img.style.marginLeft = '100px';
-    };
-    
+ 
+img.onlcick = function () {
+    var interval = setInterval(moveRight, 50); // moveRight every 100ms
+};
