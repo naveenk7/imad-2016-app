@@ -2,7 +2,7 @@ console.log('Loaded!');
 //change the text of the div main-text div
 
 var element = document.getElementById('main-text');
-element.innerHTML = "New Value";
+element.innerHTML = "New Naveen";
 
 //move the image
 var img = document.getElementById('madi');
@@ -12,5 +12,5 @@ function moveRight() {
     img.style.marginLeft = marginLeft + "px";
  }
  img.onlcick = function () {
-    var interval = setInterval(moveRight, 50); 
+    var interval = setInterval(moveRight(), 50); 
 };
