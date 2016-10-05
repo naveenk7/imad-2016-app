@@ -20,6 +20,7 @@ var request = new XMLHttpRequest();
             span.innerHTML = counter.toString();
             } 
     } else {
+         console.log('Not ready'+ request.status);
     // still not ready
 }
       
