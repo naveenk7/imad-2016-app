@@ -20,7 +20,7 @@ var request = new XMLHttpRequest();
             } 
     } else {
     // still not ready
-}
+};
       
     //Make the request
     request.open('GET', 'http://naveenk7.imad.hasura-app.io/counter', true);
