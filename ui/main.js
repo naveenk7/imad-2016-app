@@ -8,6 +8,10 @@ button.onclick = function() {
 //Make a request to the counter end point
 var request = new XMLHttpRequest();
 
+//Make the request
+    request.open('GET','http://naveenk7.imad.hasura-app.io/counter', true);
+    request.send(null);
+    
 //capture the response and store it in a variable
   request.onreadystatechange = function(){
       if (request.readyState === XMLHttpRequest.DONE) {
@@ -24,9 +28,7 @@ var request = new XMLHttpRequest();
     // still not ready
 }
       
-    //Make the request
-    request.open('GET','http://naveenk7.imad.hasura-app.io/counter', true);
-    request.send(null);
+
   };
 
 };
