@@ -4,7 +4,7 @@ console.log('Loaded!');
 var button = document.getElementById('counter');
 
 button.onclick = function() {
-    
+    console.log('Inside button click!');
 //Make a request to the counter end point
 var request = new XMLHttpRequest();
 
@@ -23,7 +23,7 @@ var request = new XMLHttpRequest();
 }
       
     //Make the request
-    request.open('GET', 'http://naveenk7.imad.hasura-app.io/counter', true);
+    request.open('GET','http://naveenk7.imad.hasura-app.io/counter', true);
     request.send(null);
   };
 
