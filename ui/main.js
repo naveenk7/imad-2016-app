@@ -4,7 +4,6 @@ console.log('Loaded!');
 var button = document.getElementById('counter');
 
 button.onclick = function() {
-    console.log('Inside button click!');
 //Make a request to the counter end point
 var request = new XMLHttpRequest();
 
@@ -19,12 +18,11 @@ var request = new XMLHttpRequest();
                 if (request.status === 200) {
             // perfect!
             var counter = request.responseText;
-            console.log('Inside button click!'+ counter);
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
             } 
     } else {
-         console.log('Not ready'+ request.status);
+     
     // still not ready
 }
       
