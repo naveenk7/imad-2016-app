@@ -15,6 +15,7 @@ var request = new XMLHttpRequest();
                 if (request.status === 200) {
             // perfect!
             var counter = request.responseText;
+            console.log('Inside button click!'+ counter);
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
             } 
