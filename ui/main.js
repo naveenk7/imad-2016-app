@@ -32,8 +32,7 @@ var request = new XMLHttpRequest();
 };
 
 //submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 
 submit.onclick = function(){
@@ -41,8 +40,6 @@ submit.onclick = function(){
     //Make a request to the counter end point
 var request = new XMLHttpRequest();
 
-
-    
 //capture the response and store it in a variable
   request.onreadystatechange = function(){
       if (request.readyState === XMLHttpRequest.DONE) {
@@ -66,6 +63,8 @@ var request = new XMLHttpRequest();
   };
   
   //Make the request
+  var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET','http://naveenk7.imad.hasura-app.io/submit-name?name='+name, true);
     request.send(null);
     
