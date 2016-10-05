@@ -38,14 +38,38 @@ var submit = document.getElementById('submit_btn');
 
 submit.onclick = function(){
     
-    //capture a list of names and render it in a list
-    var names = ['name1','name2','name3','name4'];
+    //Make a request to the counter end point
+var request = new XMLHttpRequest();
+
+//Make the request
+    request.open('GET','http://naveenk7.imad.hasura-app.io/submit-name?'+name, true);
+    request.send(null);
+    
+//capture the response and store it in a variable
+  request.onreadystatechange = function(){
+      if (request.readyState === XMLHttpRequest.DONE) {
+    // everything is good, the response is received
+                if (request.status === 200) {
+             //capture a list of names and render it in a list
+    var names = request.responseText;
+    names = JSON.parse(names);
     var list ='';
     for (var i=0;i<names.length;i++){
         list += '<li>' +names[i] + '</li>';
     }
     var ul = document.getElementById('namelist');
     ul.innerHTML= list;
+           
+         } 
+    } else {
+     
+    // still not ready
+}
+      
+
+  };
+    
+  
 }
 
 //change the text of the div main-text div
