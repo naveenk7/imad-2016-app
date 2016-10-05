@@ -42,7 +42,7 @@ submit.onclick = function(){
 var request = new XMLHttpRequest();
 
 //Make the request
-    request.open('GET','http://naveenk7.imad.hasura-app.io/submit-name?'+name, true);
+    request.open('GET','http://naveenk7.imad.hasura-app.io/submit-name?name='+name, true);
     request.send(null);
     
 //capture the response and store it in a variable
